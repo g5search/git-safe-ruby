@@ -168,7 +168,7 @@ module GitSafe
     end
 
     def has_git_config?
-      File.exists?(git_config_path)
+      File.exist?(git_config_path)
     end
 
     def git_config_path
@@ -176,7 +176,7 @@ module GitSafe
     end
 
     def delete_work_tree
-      FileUtils.rm_rf(work_tree) if Dir.exists?(work_tree)
+      FileUtils.rm_rf(work_tree) if Dir.exist?(work_tree)
     end
 
     alias_method :work_tree_is_git_repo?, :has_git_config?

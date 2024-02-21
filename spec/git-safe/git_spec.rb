@@ -146,7 +146,7 @@ RSpec.describe GitSafe::Git do
     subject(:init) { git.init }
     it 'has a .git directory' do
       init
-      expect(Dir.exists?(File.join('.git'))).to be_truthy
+      expect(Dir.exist?(File.join('.git'))).to be_truthy
     end
   end
 
